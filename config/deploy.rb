@@ -4,15 +4,15 @@
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
-set :application, 'journal_equipment'
-set :repo_url, "https://github.com/Temain/journal_equipment.git"
+set :application, 'journal_mirmax'
+set :repo_url, "https://github.com/Temain/journal_mirmax.git"
 set :default_stage, "production"
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/home/jboss/www/journal_equipment'
+set :deploy_to, '/home/jboss/www/journal_mirmax'
 
 # Default value for :scm is :git
 set :scm, :git

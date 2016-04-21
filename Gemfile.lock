@@ -144,6 +144,11 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.1.0)
       sprockets-rails (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.5)
+    rails_stdout_logging (0.0.5)
     railties (4.1.0)
       actionpack (= 4.1.0)
       activesupport (= 4.1.0)
@@ -252,6 +257,7 @@ DEPENDENCIES
   puma
   railroady
   rails (= 4.1.0)
+  rails_12factor
   remotipart (~> 1.2)
   roo
   rspec-rails
@@ -266,3 +272,6 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   unicode
+
+BUNDLED WITH
+   1.11.2

@@ -47,7 +47,7 @@ gem 'thinreports'
 
 group :production do
   gem 'pg', '~> 0.17.1'
-  gem 'rails_12factor'
+  #gem 'rails_12factor'
 end
 
 group :development, :test do

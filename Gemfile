@@ -47,7 +47,7 @@ gem 'thinreports'
 
 group :production do
   gem 'pg', '~> 0.17.1'
-  #gem 'rails_12factor'
+  gem 'rails_12factor'
 end
 
 group :development, :test do
@@ -78,4 +78,4 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-ruby "2.2.2"
+#ruby "2.2.2"

@@ -3,8 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .header {
-  background-color: #2b3e50;
-  margin: 0px 0px 20px;
+  // background-color: #2b3e50;
+  // margin: 0px 0px 20px;
   /*border-bottom: 1px solid #FF6803;*/
 
   .title{
@@ -16,27 +16,35 @@
 }
 
 .navigation{
+  // background-color: #79589F;
   position: relative;
   z-index: 1;
   padding: 0px;
   margin-bottom: 0px;
-  text-align: center;
+  margin-right: -15px;
+  margin-top: 20px;
+  text-align: left;
+  // width: 75%;
+  // float: right;
 
   li.nav-item {
-    display: inline-block;
+    // display: inline-block;
     list-style: none;
-    margin-right: -4px;
+    // margin-right: -4px;
     padding: 5px 15px 3px 15px;
     //font-weight: 100;
 
     &:hover {
-      border-bottom: 3px solid #df691a;
+      border-right: 5px solid #df691a;
       cursor: pointer;
+      font-weight: bold;
     }
 
     &.active {
       color: #FF6803;
-      border-bottom: 3px solid #df691a;
+      border-right: 5px solid #df691a;
+      font-weight: bold;
+      background: #79589F;
     }
 
     & > a {
@@ -48,8 +56,13 @@
 
     .link {
       outline: none;
-      background-color: #2b3e50;
+      color: white;
+      background-color: #534292;
       border: none;
+
+      &.active {
+        background: #79589F;
+      }
     }
   }
 }
@@ -62,10 +75,11 @@
   }
 
   .item {
-    background-color: #2b3e50;
+    // background-color: #2b3e50;
     padding: 15px;
-    margin-bottom: 5px;
-    border-bottom: 2px solid #4e5d6c;
+    // margin-bottom: 5px;
+    // border-bottom: 2px solid #4e5d6c;
+    border-bottom: 1px #ccc solid;
     width: 100%;
 
     i {
@@ -73,10 +87,10 @@
     }
 
     &:hover {
-      border: 1px solid #df691a;
-      box-shadow: 0 0 5px rgb(255, 92, 2);
-      -webkit-box-shadow: 0 0 5px rgb(255, 92, 2);
-      -moz-box-shadow: 0 0 5px rgb(255, 92, 2);
+      border: 1px solid #79589F;
+      box-shadow: 0 0 1px #79589F;
+      -webkit-box-shadow: 0 0 1px #79589F;
+      -moz-box-shadow: 0 0 1px #79589F;
       cursor: pointer;
     }
 
@@ -107,7 +121,8 @@
         }
 
         i:hover {
-          color: #ffffff;
+          // color: #ffffff;
+          color: black;
         }
       }
 
@@ -134,7 +149,8 @@
         .btn-group {
           vertical-align: text-top;
           button.dropdown-toggle {
-            background-color: #2b3e50;
+            // background-color: #2b3e50;
+            background-color: white;
             font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
             border: none;
             border-bottom: 1px solid #2b3e50;
@@ -162,7 +178,7 @@
 
 /* ----------- edit and new form ------------ */
 .form-horizontal {
-  background-color: #2b3e50;
+  // background-color: #2b3e50;
   padding: 20px 30px 20px;
 
   legend {
@@ -188,24 +204,25 @@
 
 
 .edit {
-  background-color: #2b3e50;
+  background-color: #534292;
   .menu {
-    background-color: #4e5d6c;
+    background-color: #534292;
     .text-muted {
       color: #2b3e50;
     }
   }
 
   .back {
-    background-color: #4e5d6c;
+    background-color: #534292;
+    margin-top: 10px !important;
     .text-muted {
       color: #2b3e50;
     }
   }
 
   .header {
-    background-color: #4e5d6c;
-    border-bottom: 1px solid #FF6803;
+    background-color: #534292;
+    // border-bottom: 1px solid #FF6803;
 
     .title {
       /*border-left:2px solid #ccc;*/
@@ -213,10 +230,16 @@
       padding: 20px 0 20px 20px;
       text-align: center;
       font-size: 2.5em;
+      color: white;
     }
   }
 
   .content {
-    border-bottom: 1px solid #FF6803;
+    background-color: white;
+    // border-bottom: 1px solid #FF6803;
+
+    #equipment_equipment_type_id {
+      border: 1px #ccc solid !important;
+    }
   }
 }

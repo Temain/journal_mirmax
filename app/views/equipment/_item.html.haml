@@ -29,24 +29,24 @@
       = fa_icon "bars", class: "text-muted", title: "Действия", id: item.id
 
   .name= item.full_name
-  .inventory= "Инвентарный номер: #{item.inventory_number}"
-  .bottom
-    .department
-      Подразделение:
-      %span
-        .btn-group
-          =button_tag class: "dropdown-toggle", type: "button", data: { toggle: "dropdown" } do
-            = item.department.name
-          %ul.dropdown-menu
-            %div
-              =fa_icon "user"
-              = "#{item.department.chief}"
-            %div
-              =fa_icon "phone"
-              - if item.department.phone_number
-                = "#{local_phone_number item.department.phone_number}"
-              - else
-                = "-"
+  -#.inventory= "Инвентарный номер: #{item.inventory_number}"
+  -#.bottom
+  -#  .department
+  -#    Подразделение:
+  -#    %span
+  -#      .btn-group
+  -#        =button_tag class: "dropdown-toggle", type: "button", data: { toggle: "dropdown" } do
+  -#          = item.department.name
+  -#        %ul.dropdown-menu
+  -#          %div
+  -#            =fa_icon "user"
+  -#            = "#{item.department.chief}"
+  -#          %div
+  -#            =fa_icon "phone"
+  -#            - if item.department.phone_number
+  -#              = "#{local_phone_number item.department.phone_number}"
+  -#            - else
+  -#              = "-"
 
     -#.created_at= "Добавлен: #{item.created_at.strftime("%d.%m.%Y")}"
     -#- if item.writed_off?

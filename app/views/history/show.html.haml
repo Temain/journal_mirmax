@@ -4,7 +4,7 @@
 -#  -else
 -#    %h3= record.journalable.reason
 
-.container-fluid
+.container-fluid.gradient-primary
   .history
     .row.menu
       .col-md-12
@@ -42,7 +42,7 @@
               "rel" => "popover", "data-placement" => "bottom", "data-trigger" => "hover" do
               = fa_icon "power-off 2x", class: "text-muted"
         %div.user-name
-          = fa_icon "user", class: "text-muted"
+          = fa_icon "user"
           = current_user.email.split("@")[0]
 
     .row.back

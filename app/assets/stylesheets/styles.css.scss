@@ -20,21 +20,104 @@ input[type="email"]:focus,
 input[type="password"]:focus,
 textarea.form-control:focus {
   border: 1px solid #df691a;
-  box-shadow: 0 0 5px rgb(255, 92, 2);
-  -webkit-box-shadow: 0 0 5px rgb(255, 92, 2);
-  -moz-box-shadow: 0 0 5px rgb(255, 92, 2);
+  box-shadow: 0 0 1px rgb(255, 92, 2);
+  -webkit-box-shadow: 0 0 1px rgb(255, 92, 2);
+  -moz-box-shadow: 0 0 1px rgb(255, 92, 2);
 }
 
 .btn {
   box-shadow: none;
 }
 
+.input-group-addon {
+  background-color: white;
+}
+
+select {
+  border: 1px #ccc solid !important;
+}
+//.btn-primary {
+//  background-color: #8A6EF3;
+//  border: 1px #534292 solid;
+//}
+
+.btn-primary {
+  color: #fff;
+  background-color: #79589f;
+  background-image: -webkit-gradient(linear,right top,left bottom,color-stop(0,rgba(159,88,150,0)),color-stop(1,rgba(159,88,150,0.6)));
+  background-image: -o-linear-gradient(left bottom,rgba(159,88,150,0) 0,rgba(159,88,150,0.6) 100%);
+  background-image: -moz-linear-gradient(left bottom,rgba(159,88,150,0) 0,rgba(159,88,150,0.6) 100%);
+  background-image: -webkit-linear-gradient(left bottom,rgba(159,88,150,0) 0,rgba(159,88,150,0.6) 100%);
+  background-image: -ms-linear-gradient(left bottom,rgba(159,88,150,0) 0,rgba(159,88,150,0.6) 100%);
+  background-image: linear,to left bottom,rgba(159,88,150,0) 0,rgba(159,88,150,0.6) 100%;
+  border: 1px #534292 solid;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #6c4f8f;
+  border: 1px #534292 solid;
+}
+
+//.btn-primary:hover {
+//  background: #534292;
+//  border: 1px #534292 solid;
+//}
+
+.make-white {
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+
+.gradient-primary {
+  background-image: -webkit-linear-gradient(top,#654a86,#534292);
+  background-image: linear-gradient(to bottom,#654a86,#534292);
+  background-color: #534292;
+}
+
+html,body, .container-fluid, .table-container
+{
+  height:100%;
+}
+
+.purple {
+  background-color: #534292;
+}
+
+.search-form {
+  margin-top: 20px;
+}
+
+.table-container {
+  display:table;
+  width: 100%;
+  // margin-top: -50px;
+  // padding-top: 50px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  .table-row {
+    height: 100%;
+    display: table-row;
+
+    .table-cell {
+      display: table-cell;
+      float: none;
+    }
+  }
+
+  .logo {
+    margin-left: 15px;
+    margin-top: 20px;
+  }
+}
+
 body {
-  background-color: #4e5d6c;
+  // background-color: #79589F;
 
   .menu-base {
     position: fixed;
-    background-color: #2b3e50;
+    // background-color: #2b3e50;
     padding: 5px;
     z-index: 99;
 
@@ -45,6 +128,10 @@ body {
         color: #ffffff;
       }
 
+      .text-muted {
+        color: white;
+      }
+
       .dropdown-menu {
         font-size: 2em;
         white-space: nowrap;
@@ -53,16 +140,24 @@ body {
         /*z-index: 10000;*/
 
         &.light {
-          background-color: #4e5d6c;
+          background-color: white;
+
+          i {
+            color: #9C9C9C;
+          }
 
           & span {
             font-size: 0.5em;
-            color: #2b3e50;
+            // color: #2b3e50;
+            color: #9C9C9C !important;
           }
 
           & > li > a {
             padding-left: 0;
-            color: #2b3e50;
+            color: #9C9C9C !important;
+            font-size: 0.5em;
+            padding: 0px;
+            margin-left: -15px;
           }
         }
 
@@ -88,14 +183,15 @@ body {
       .dropdown-menu a:hover i,
       .dropdown-menu a:hover span,
       .dropdown-menu a:hover {
-        color: #ffffff;
+        color: black;
         text-decoration: none;
       }
 
       .dropdown-menu > li > a:hover {
         background-image: none;
-        background-color: #2b3e50;
-        color: white;
+        background-color: white;
+        color: black !important;
+        font-weight: bold;
       }
     }
   }
@@ -104,12 +200,23 @@ body {
     @extend .menu-base;
     right: 0px;
     top: 0px;
+    padding-top: 15px;
+    padding-right: 15px;
+
+    .user-name {
+      color: white;
+
+      i {
+        color: white;
+      }
+    }
   }
 
   .back {
     @extend .menu-base;
     left: 0px;
     top: 0px;
+    margin-top: 10px;
 
     .text-muted {
       color: #4e5d6c;
@@ -123,7 +230,7 @@ body {
     opacity: 0.5;
 
     .text-muted {
-      color: #4e5d6c;
+      color: white;
     }
 
     &:hover {
@@ -145,6 +252,18 @@ body {
     left: 0;
     right: 0;
 
+    form {
+      background: white !important;
+      padding: 50px;
+      border-radius: 10px;
+    }
+
+    .input-group {
+      i {
+        color: #79589F;
+      }
+    }
+
     .page-buffer {
       height: 20px;
     }
@@ -161,8 +280,11 @@ body {
 
     .title{
       font-weight: 400;
-      margin: 5px 10px 50px 5px;
+      font-size: 1.2em;
+      color: white;
+      margin: 5px;
       text-align: center;
+      font-family: 'Source Sans Pro', Calibri, Candara, Arial, sans-serif !important;
     }
 
     .sign-in {
@@ -184,15 +306,15 @@ body {
     }
 
     .center {
-      padding: 30px;
+      // padding: 30px;
       display: table-cell;
       vertical-align: middle;
       float: none;
-      background-color: #2b3e50;
+      // background-color: #2b3e50;
     }
 
     .input-group {
-      margin-bottom: 5px;
+      margin-bottom: 15px;
     }
   }
 }
@@ -213,6 +335,14 @@ body {
 #report_by_spare_modal {
   span.twitter-typeahead {
     width: 100%;
+  }
+}
+
+#repair_modal {
+  .col-lg-12 {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 15px;
   }
 }
 
@@ -312,7 +442,8 @@ body {
 .bootstrap-datetimepicker-widget td.second:hover,
 .bootstrap-datetimepicker-widget thead tr:first-child th:hover,
 .bootstrap-datetimepicker-widget td span:hover {
-  background: #2b3e50;
+  background: #79589F;
+  color: white;
 }
 
 /* ------- form validation ---------- */
@@ -322,7 +453,7 @@ body {
 }
 
 select {
-  border: 0 !important;  /*Removes border*/
+  // border: 0 !important;  /*Removes border*/
   -webkit-appearance: none;  /*Removes default chrome and safari style*/
   -moz-appearance: none; /* Removes Default Firefox style*/
   background: #ffffff url(down.png) no-repeat 96% center !important;

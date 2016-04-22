@@ -86,6 +86,22 @@
             = text_field_tag :search, params[:search], class: "form-control", placeholder: "Введите строку поиска..."
             %span.input-group-btn
               = submit_tag "Поиск", class: "btn btn-primary", name: nil
+        .row.create
+          = link_to new_equipment_path, method: :get do
+            = fa_icon "plus-square"
+            %span Добавить
+          = link_to import_path, method: :get do
+            = fa_icon "download"
+            %span Импорт
+
+          .dropdown.reports
+            %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+              = fa_icon "bar-chart-o"
+              Отчёты
+              %b.caret
+            %ul.dropdown-menu
+              %li= link_to "По подразделению", "javascript:;", "data-toggle" => "modal", "data-target" => "#report_by_department_modal"
+              %li= link_to "По зап. части", "javascript:;", "data-toggle" => "modal", "data-target" => "#report_by_spare_modal"
 
         #Container
           =render partial: 'container'
@@ -93,35 +109,40 @@
       .header
         .row.menu
           .col-md-12.col-xs-12
-            .pull-right
-              .menu-item
-                = link_to "javascript:;", method: :get, class: "dropdown-toggle", data: { toggle: "dropdown" }, id: "actions-link", "data-content" => "Действия",
-                  "rel" => "popover", "data-placement" => "bottom", "data-trigger" => "hover" do
-                  = fa_icon "bars 2x", class: "text-muted"
-                %ul.dropdown-menu.light
-                  %div
-                    = link_to new_equipment_path, method: :get do
-                      = fa_icon "plus-square"
-                      %span Добавить
-                  %div
-                    = link_to import_path, method: :get do
-                      = fa_icon "download", class: "text-muted"
-                      %span Импорт
-              .menu-item
-                = link_to "javascript:;", id: "reports-link", class: "dropdown-toggle", data: { toggle: "dropdown" }, "data-content" => "Отчеты",
-                  "rel" => "popover", "data-placement" => "bottom", "data-trigger" => "hover" do
-                  = fa_icon "bar-chart-o 2x", class: "text-muted"
-                %ul.dropdown-menu.light
-                  %li= link_to "По подразделению", "javascript:;", class: "text-muted", "data-toggle" => "modal", "data-target" => "#report_by_department_modal"
-                  %li= link_to "По зап. части", "javascript:;", class: "text-muted", "data-toggle" => "modal", "data-target" => "#report_by_spare_modal"
-
-              .menu-item
-                = link_to destroy_user_session_path, method: :delete, id: "log-out-link", "data-content" => "Выйти",
-                  "rel" => "popover", "data-placement" => "bottom", "data-trigger" => "hover" do
-                  = fa_icon "power-off 2x", class: "text-muted"
+            -#.pull-right
+            -#  .menu-item
+            -#    = link_to "javascript:;", method: :get, class: "dropdown-toggle", data: { toggle: "dropdown" }, id: "actions-link", "data-content" => "Действия",
+            -#      "rel" => "popover", "data-placement" => "bottom", "data-trigger" => "hover" do
+            -#      = fa_icon "bars 2x", class: "text-muted"
+            -#    %ul.dropdown-menu.light
+            -#      %div
+            -#        = link_to new_equipment_path, method: :get do
+            -#          = fa_icon "plus-square"
+            -#          %span Добавить
+            -#      %div
+            -#        = link_to import_path, method: :get do
+            -#          = fa_icon "download", class: "text-muted"
+            -#          %span Импорт
+            -#  .menu-item
+            -#    = link_to "javascript:;", id: "reports-link", class: "dropdown-toggle", data: { toggle: "dropdown" }, "data-content" => "Отчеты",
+            -#      "rel" => "popover", "data-placement" => "bottom", "data-trigger" => "hover" do
+            -#      = fa_icon "bar-chart-o 2x", class: "text-muted"
+            -#    %ul.dropdown-menu.light
+            -#      %li= link_to "По подразделению", "javascript:;", class: "text-muted", "data-toggle" => "modal", "data-target" => "#report_by_department_modal"
+            -#      %li= link_to "По зап. части", "javascript:;", class: "text-muted", "data-toggle" => "modal", "data-target" => "#report_by_spare_modal"
+            -#
+            -#  .menu-item
+            -#    = link_to destroy_user_session_path, method: :delete, id: "log-out-link", "data-content" => "Выйти",
+            -#      "rel" => "popover", "data-placement" => "bottom", "data-trigger" => "hover" do
+            -#      = fa_icon "power-off 2x", class: "text-muted"
             %div.user-name
+              Здравствуйте,
               = fa_icon "user", class: "text-muted"
               = current_user.email.split("@")[0]
+              !
+              = link_to destroy_user_session_path, method: :delete, id: "log-out-link", "data-content" => "Выйти",
+                "rel" => "popover", "data-placement" => "bottom", "data-trigger" => "hover" do
+                = fa_icon "power-off"
 
 
   .page-buffer

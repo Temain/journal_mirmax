@@ -67,6 +67,24 @@
   }
 }
 
+.create {
+
+  li > a {
+    margin: 0;
+  }
+
+  a {
+    color: #79589F;
+    font-size: 1.2em;
+    padding: 5px 15px;
+    margin-left: 15px;
+  }
+
+  .reports {
+    display: inline-block;
+  }
+}
+
 #Container{
   margin-top: 10px;
 
@@ -92,6 +110,10 @@
       -webkit-box-shadow: 0 0 1px #79589F;
       -moz-box-shadow: 0 0 1px #79589F;
       cursor: pointer;
+
+      .actions {
+        display: inline-block;
+      }
     }
 
     .name {
@@ -108,7 +130,7 @@
     }
 
     .actions {
-      display: inline-block;
+      display: none;
       float: right;
 
       & > a {

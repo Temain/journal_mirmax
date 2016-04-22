@@ -18,13 +18,13 @@
                 = label :start_date, "С:", class: "control-label"
                 #start_datetimepicker.input-group.date{ "data-date-format" => "DD.MM.YYYY" }
                   = text_field_tag :start_date, nil, class: "form-control"
-                  %span.input-group-addon.dark
+                  %span.input-group-addon
                     %span.glyphicon.glyphicon-calendar
               .col-lg-6
                 = label :end_date, "По:", class: "control-label"
                 #end_datetimepicker.input-group.date{ "data-date-format" => "DD.MM.YYYY" }
                   = text_field_tag :end_date, nil, class: "form-control"
-                  %span.input-group-addon.dark
+                  %span.input-group-addon
                     %span.glyphicon.glyphicon-calendar
 
         .modal-footer

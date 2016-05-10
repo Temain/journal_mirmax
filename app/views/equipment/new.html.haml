@@ -75,38 +75,38 @@
 
           .form-group
             - field_with_errors @item, :equipment_type do
-              - f.label :equipment_type_id, "Тип", class: "col-lg-2 control-label"
+              - f.label :equipment_type_id, "Тип", class: "col-lg-3 control-label"
 
-            .col-lg-10
+            .col-lg-9
               = f.select :equipment_type_id, @equipment_types,
                          { prompt: "Выберите тип оборудования..." }, class: "form-control"
 
           = fields_for @item.manufacturer do |m|
             .form-group
-              = m.label :name, "Производитель", class: "col-lg-2 control-label"
-              #remote.col-lg-10
+              = m.label :name, "Производитель", class: "col-lg-3 control-label"
+              #remote.col-lg-9
                 = m.text_field :name, class: "typeahead manufacturer form-control", placeholder: "Введите производителя..."
 
           .form-group
-            = f.label :model, "Модель", class: "col-lg-2 control-label"
-            .col-lg-10
+            = f.label :model, "Модель", class: "col-lg-3 control-label"
+            .col-lg-9
               = f.text_field :model, placeholder: "Введите модель...", class: "form-control"
 
-          .form-group
-            - field_with_errors @item, :department do
-              = f.label :department_id, "Подразделение", class: "col-lg-2 control-label"
-            .col-lg-10
-              = f.select :department_id, @departments,
-                  { prompt: "Выберите подразделение..." }, class: "form-control"
+          -#.form-group
+          -#  - field_with_errors @item, :department do
+          -#    = f.label :department_id, "Подразделение", class: "col-lg-3 control-label"
+          -#  .col-lg-9
+          -#    = f.select :department_id, @departments,
+          -#        { prompt: "Выберите подразделение..." }, class: "form-control"
 
           .form-group
-            = f.label :inventory_number, "Инвентарный номер", class: "col-lg-2 control-label"
-            .col-lg-10
+            = f.label :inventory_number, "Инвентарный номер", class: "col-lg-3 control-label"
+            .col-lg-9
               = f.text_field :inventory_number, placeholder: "Введите инвентарный номер...",
                               maxlength: "12", class: "form-control"
 
           .form-group
-            .col-lg-10.col-lg-offset-2
+            .col-lg-9.col-lg-offset-3
               = f.button class: "btn btn-primary" do
                 %i.glyphicon.glyphicon-floppy-disk
                 Сохранить

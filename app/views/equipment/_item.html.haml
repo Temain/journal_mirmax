@@ -12,9 +12,9 @@
       "rel" => "popover", "data-placement" => "bottom", "data-trigger" => "hover" do
       = fa_icon "wrench", class: "text-muted", "data-toggle" => "modal", "data-target" => "#repair_modal", id: item.id, equipment_type_id: item.equipment_type.id
 
-    = link_to 'javascript:;', id: "relocation-link", "data-content" => "Передать подразделению",
-      "rel" => "popover", "data-placement" => "bottom", "data-trigger" => "hover" do
-      = fa_icon "exchange", class: "text-muted", "data-toggle" => "modal", "data-target" => "#relocation_modal", id: item.id
+    -#= link_to 'javascript:;', id: "relocation-link", "data-content" => "Передать подразделению",
+    -#  "rel" => "popover", "data-placement" => "bottom", "data-trigger" => "hover" do
+    -#  = fa_icon "exchange", class: "text-muted", "data-toggle" => "modal", "data-target" => "#relocation_modal", id: item.id
 
     = link_to report_by_equipment_path(item.id), method: :get, id: "pdf-link", "data-content" => "Экспорт в pdf",
       "rel" => "popover", "data-placement" => "bottom", "data-trigger" => "hover", target: '_self' do

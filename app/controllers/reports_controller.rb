@@ -59,10 +59,11 @@ class ReportsController < ApplicationController
     report = ThinReports::Report.create layout: File.join(Rails.root, 'app', 'reports', 'report_by_equipment.tlf') do |r|
       r.start_new_page do |page|
         page.values equipment: "#{@equipment.full_name}",
-                    department: "#{@equipment.department.name}",
-                    chief: "Руководитель:  #{@equipment.department.chief}",
-                    mat: "Материально ответственный:  #{@equipment.department.materially_responsible}",
-                    phone_number: "Номер телефона:  #{ local_phone_number @equipment.department.phone_number }"
+                    company: "ООО 'Мирмэкс'"
+                    # department: "#{@equipment.department.name}",
+                    # chief: "Руководитель:  #{@equipment.department.chief}",
+                    # mat: "Материально ответственный:  #{@equipment.department.materially_responsible}",
+                    # phone_number: "Номер телефона:  #{ local_phone_number @equipment.department.phone_number }"
 
         @equipment.journal_records.each do |record|
           event = record.journalable
